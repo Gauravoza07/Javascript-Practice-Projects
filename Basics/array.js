@@ -22,4 +22,3 @@ myArr.unshift("Shiva")
 //index of array
 console.log(myArr.indexOf("Gaurav"))
 
-//slice ,Splice 
