@@ -14,7 +14,3 @@
 ((name) => {
     console.log(`DB connected too ${name}`);
 })("Gaurav")
-
-
-
-

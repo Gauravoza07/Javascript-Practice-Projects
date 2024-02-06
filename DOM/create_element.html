@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new DOM element</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <script>
+        //this creation not showing on browser it display in console
+        //this will be present in memory
+        const div = document.createElement('div')
+        console.log(div);
+        div.className = 'main'
+        div.id = Math.round(Math.random() * 10 + 1)
+        div.setAttribute("title","generated title")
+        div.style.backgroundColor = "green"
+        div.style.padding = "12px"
+        // div.innerText = "Gaurav Oza is best"
+
+        //Adding this created elements of javascript to HTML on browser
+        const addText = document.createTextNode('Gaurav oza is best')
+        div.appendChild(addText)
+        document.body.appendChild(div)
+    </script>
+</body>
+</html>
