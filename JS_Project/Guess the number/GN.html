@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="GN.css">
+  <body>
+    <h1>Guess the number game</h1>
+    <p>
+      Try to guess the number between 1 to 100.<br />
+      How many attempt do you take guess the exact number.
+    </p>
+
+    <div class="wrapper">
+      <form class="form">
+        <label for="guessField" id="guess">Guess a number</label><br />
+        <input type="number" id="guessField" class="guessField" /><br />
+        <input type="button" id="submit" value="Submit" class="btn"/>
+      </form>
+    </div>
+
+    <div class="result">
+        <h1>Result</h1>
+        <p>Firstly attempt then after you will be get hint </p>
+        <p>Hints : <span class="hint"></span></p>
+        <p><span class="success-message"></span></p>
+    </div>
+</body>
+<script src="GN.js"></script>
+</html>
