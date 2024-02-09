@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asynchronous / Synchronous Function</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayName = function(){
+        console.log("Welcome, Gaurav Oza")
+    }
+
+    const syncFunc = function(){
+        document.querySelector('h1').innerHTML = "Gaurav Oza";
+    }
+    //perform task repeated form 
+    setInterval(syncFunc,2000)
+    //perfom task only once
+    setTimeout(sayName, 2000)
+
+    //stop the async function
+    addEventListener('click', function(){
+        clearTimeout(sayName())
+    })
+</script>
+</html>

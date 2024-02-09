@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Function Project</title>
+</head>
+<style>
+    body{
+        background-color: slategray;
+        text-align: center;
+    }
+
+    h1{
+        text-align: center;
+    }
+    button{
+        border: 0;
+        width: 5rem;
+        height: 3rem;
+    }
+    
+</style>
+<body>
+    <h1>Color Changer</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //generate random color
+    const randomColor = function(){
+        const hex = "0123456789ABCDEF";
+        let color = "#";
+        for(let i = 0; i < 6; i++)
+        {
+            color += hex[Math.floor(Math.random()*16)]
+        }
+        return color;
+    };
+
+    let interval;
+
+    const startChangeColor = function(){
+        
+        const changecolor = function(){
+            document.body.style.backgroundColor = randomColor();
+        };
+        interval = setInterval(changecolor, 1000);
+
+    };
+    const stopChangeColor = function(){
+        clearInterval(interval);
+        interval = null;
+    };
+
+    document.getElementById('start').addEventListener('click', startChangeColor)
+    document.getElementById('stop').addEventListener('click', stopChangeColor)
+</script>
+</html>

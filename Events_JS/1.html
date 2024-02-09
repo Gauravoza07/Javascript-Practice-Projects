@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width: 10rem;
+        height: 10rem;
+    }
+    body{
+        background-color: darkslategrey;
+    }
+</style>
+<body>
+    <div>
+        <ul id="images">
+            <li><img src="images/pexels-eberhard-grossgasteiger-1421903.jpg" id="image1" alt="image1"></li>
+            <li><img src="images/pexels-ian-turnell-709552.jpg" id="images2" alt="images2"></li>
+            <li><img src="images/pexels-eberhard-grossgasteiger-1421903.jpg" id="images3" alt="images3"></li>
+            <li><img src="images/pexels-ian-turnell-709552.jpg" id="images4" alt="images4"></li>
+            <li><img src="images/pexels-eberhard-grossgasteiger-1421903.jpg" id="images5" alt="images5"></li>
+            <li><a href="http://google.com">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //bubbling up down to up
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("Clicked inside th ul");
+    }, false)
+
+    document.getElementById('image1').addEventListener('click',function(e){
+        console.log("HELLO WORLD");
+        //this function stops bubbling up only run this function command
+        e.stopPropagation();
+    })
+
+    document.querySelector('images').addEventListener('click',function(e){
+        console.log(e)
+    }, false)
+</script>
+</html>
