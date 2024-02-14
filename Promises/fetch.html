@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">Fetch a file to change this text.</p>
+
+<script>
+  //sample text file
+  //In fetch add here API link
+getText("fetch.txt");
+
+async function getText(file) {
+  //calling API from there location to browser
+  let x = await fetch(file);
+  let y = await x.text();
+  document.getElementById("demo").innerHTML = y;
+}
+</script>
+
+</body>
+</html>
